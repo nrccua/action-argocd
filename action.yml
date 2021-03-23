@@ -1,0 +1,24 @@
+name: 'ArgoCD Annotations'
+description: Runs ArgoCD Command line tool
+author: Carlos Ortiz
+inputs:
+  token:
+    description: "ArgoCD username"
+    required: true
+    default: ""
+  application:
+    description: "ArgoCD userpassword Password"
+    required: true
+    default: ""
+  commitId:
+    description: "Commit Id to annotate"
+    required: true
+    default:
+  branch:
+    description: "Branch to  annotate"
+    required: true
+    default: 
+runs:
+  using: 'docker'
+  image: Dockerfile
+
