@@ -1,4 +1,4 @@
-#!/bin/bash +x
+#!/bin/bash
 NOW="$(date)"
-argocd app patch-resource $2 --kind Deployment  --patch "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"lastUpdate\":\"$NOW\", \"gitBranch\":\"$4\", \"commitId\":\"$3\"}}}}}" --auth-token $1
+argocd APP patch-resource $2 --kind Deployment  --patch "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"lastUpdate\":\"$NOW\", \"gitBranch\":\"$COMMIT_ID\", \"commitId\":\"$BRANCH\"}}}}}" --auth-token $TOKEN
 
